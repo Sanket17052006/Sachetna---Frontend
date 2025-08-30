@@ -8,7 +8,11 @@
   
 </head>
 <body>
+  <div class="top-right">
+  <button class="btn admin-btn" onclick="goToAdmin()">Admin Login</button>
+</div>
   <div class="container">
+    
     <h1>Welcome to the Aadhaar Awareness Portal</h1>
     <p>Empowering students to understand Aadhaar seeding and access government schemes.</p>
 
@@ -23,6 +27,12 @@
     function continueAsGuest() {
       window.location.href = "home.html"; 
     }
+    function goToAdmin() {
+    window.location.href = "admin.html";
+  }
+
+
+  </script>
   </script>
 </body>
 </html>

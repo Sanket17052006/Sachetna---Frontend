@@ -9,6 +9,26 @@
       align-items: center;
       height: 100vh;
     }
+    /* Admin Button  */
+.top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.admin-btn {
+  background-color: #2c3e50;
+  color: white;
+  padding: 8px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-btn:hover {
+  background-color: #1a252f;
+}
     .container {
       text-align: center;
       background-color: white;
@@ -75,3 +95,66 @@
       margin-top: auto;
       margin-bottom: auto;
     }
+   /* MODULE PAGE STYLINGS */
+#moduleTitle {
+  margin-bottom: 20px;
+}
+
+#slidesContainer {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+#slidesContainer h3 {
+  color: var(--text-dark);
+  margin-bottom: 5px;
+}
+
+#slidesContainer p {
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+#quizContainer {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#quizContainer p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#quizContainer label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#quizResult {
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+/*  ADMIN & ERROR Page styling */
+.section {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+h2, h3 {
+  color: var(--text-dark);
+}
+
+p {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+button.btn.primary {
+  margin-top: 10px;
+}

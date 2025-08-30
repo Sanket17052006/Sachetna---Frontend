@@ -31,7 +31,7 @@
         <div class="card">
           <h3>Aadhaar Seeding Explained</h3>
           <p>Understand the difference between Aadhaar linking and seeding through interactive slides.</p>
-          <button onclick="startModule('module1')">Start Module</button>
+          <button onclick="startModule('1')">Start Module</button>
         </div>
 
         
@@ -39,7 +39,7 @@
           <h3>Leaderboard</h3>
           <ul id="leaderboardList">
             
-            <li>You - 0/5</li> 
+            
           </ul>
         </div>
       </div>
@@ -47,7 +47,7 @@
 
   </div>
   </div>
-
+<script src="js/config.js"></script>
   <script>
     function checkSeeding() {
       const aadhaar = document.getElementById("aadhaarInput").value;
@@ -65,8 +65,12 @@
     }
 
     function startModule(moduleId) {
-      window.location.href = `${moduleId}.html`; 
-    }
+  window.location.href = `module.html?moduleId=${moduleId}`;
+}
   </script>
+  
+  <script src="js/leaderboard.js"></script>
+  
+
 </body>
 </html>

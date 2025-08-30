@@ -1,0 +1,11 @@
+# Logs
+*.log
+# Environment variables
+.env
+dist/
+build/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
