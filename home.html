@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Aadhaar Awareness Portal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container0">
+<div class="heading">
+    <h1>Aadhaar Awareness Portal</h1>
+    <p>Welcome, Explore the features below to learn about Aadhaar seeding and access government schemes.</p>
+    </div>
+    <div class="container1">
+    <div class="section">
+      <h2>Check Aadhaar Seeding Status</h2>
+      <p>Enter your Aadhaar number to check if your bank account is seeded for DBT.<br>
+        (This is a mock UI for demonstration.)</p>
+      <div class="input-group">
+        <input type="text" placeholder="Enter Aadhaar Number" id="aadhaarInput" />
+        <button onclick="checkSeeding()">Check Status</button>
+      </div>
+      <div id="aadhaarResult" style="margin-top: 15px; font-weight: bold;"></div>
+    </div>
+
+    <div class="section">
+      <h2>Learn & Compete</h2>
+      <div class="module-grid">
+        
+        <div class="card">
+          <h3>Aadhaar Seeding Explained</h3>
+          <p>Understand the difference between Aadhaar linking and seeding through interactive slides.</p>
+          <button onclick="startModule('module1')">Start Module</button>
+        </div>
+
+        
+        <div class="card_leaderboard">
+          <h3>Leaderboard</h3>
+          <ul id="leaderboardList">
+            
+            <li>You - 0/5</li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <script>
+    function checkSeeding() {
+      const aadhaar = document.getElementById("aadhaarInput").value;
+      const resultBox = document.getElementById("aadhaarResult");
+
+      if (aadhaar.length !== 12 || isNaN(aadhaar)) {
+        resultBox.innerText = "❌ Invalid Aadhaar number. Please enter a 12-digit number.";
+        resultBox.style.color = "red";
+        return;
+      }
+
+    
+      resultBox.innerText = "✅ Your account is seeded with State Bank of India.";
+      resultBox.style.color = "green";
+    }
+
+    function startModule(moduleId) {
+      window.location.href = `${moduleId}.html`; 
+    }
+  </script>
+</body>
+</html>
