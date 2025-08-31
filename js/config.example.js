@@ -1,0 +1,1 @@
+const BASE_URL = ""; // URKL for backend server

@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // TEST leaderboard entries
   const mockEntries = [
-    { name: "Learner_472", score: "5/5" },
-    { name: "Learner_389", score: "2/5" }
+    { name: "Sanket", score: "5/5" },
+    { name: "Vansh", score: "4/5" }
   ];
   const guestScore = localStorage.getItem("guestScore");
   if (guestScore) {

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awareness Materials | Sachetna</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="materials-page">
+
+  <header class="materials-header">
+    <nav class="materials-nav container">
+      <div class="logo-section">
+        <div class="logo-icon">📚</div>
+        <h1>Awareness Materials Portal</h1>
+      </div>
+      <div class="nav-actions">
+        <button class="btn secondary" onclick="goHome()">← Back to Home</button>
+        <button class="btn admin-btn" onclick="goToAdmin()">Admin</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="materials-hero">
+    <div class="container">
+      <h2>Download & Share Awareness Materials</h2>
+      <p>Help spread awareness about Aadhaar-DBT banking across communities with our ready-to-use materials</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-number">25,000+</div>
+          <div class="stat-label">Downloads</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">12</div>
+          <div class="stat-label">Languages</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Panchayats Reached</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <main class="materials-content">
+    
+    <section class="filter-section">
+      <div class="container">
+        <h3>Filter Materials</h3>
+        <div class="filter-controls">
+          <select id="languageFilter" onchange="filterMaterials()">
+            <option value="all">All Languages</option>
+            <option value="hindi">हिंदी (Hindi)</option>
+            <option value="english">English</option>
+            <option value="bengali">বাংলা (Bengali)</option>
+            <option value="tamil">தமிழ் (Tamil)</option>
+            <option value="telugu">తెలుగు (Telugu)</option>
+            <option value="gujarati">ગુજરાતી (Gujarati)</option>
+          </select>
+          
+          <select id="categoryFilter" onchange="filterMaterials()">
+            <option value="all">All Categories</option>
+            <option value="posters">Posters</option>
+            <option value="social">Social Media</option>
+            <option value="presentations">Presentations</option>
+            <option value="audio">Audio Messages</option>
+            <option value="videos">Video Content</option>
+          </select>
+          
+          <select id="audienceFilter" onchange="filterMaterials()">
+            <option value="all">All Audiences</option>
+            <option value="students">Students</option>
+            <option value="parents">Parents</option>
+            <option value="teachers">Teachers</option>
+            <option value="officials">Officials</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="materials-grid-section">
+      <div class="container">
+        
+        
+        <div class="category-section" data-category="posters">
+          <h3 class="category-title">📋 Downloadable Posters</h3>
+          <div class="materials-grid">
+            
+            <div class="material-card" data-language="hindi" data-audience="students">
+              <div class="material-preview">
+                <div class="preview-placeholder poster-preview">
+                  <div class="preview-content">
+                    <h4>आधार-डीबीटी अंतर</h4>
+                    <div class="preview-elements">
+                      <div class="element-box">🔗 आधार लिंक</div>
+                      <div class="element-box">💰 डीबीटी सक्षम</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="material-info">
+                <h4>Aadhaar vs DBT Comparison (Hindi)</h4>
+                <p>Visual comparison poster for students</p>
+                <div class="material-meta">
+                  <span class="meta-tag">📏 A3 Size</span>
+                  <span class="meta-tag">🎯 Students</span>
+                  <span class="meta-tag">📥 1.2K downloads</span>
+                </div>
+                <div class="material-actions">
+                  <button class="btn primary" onclick="downloadMaterial('poster-hindi-comparison')">
+                    📥 Download PDF
+                  </button>
+                  <button class="btn secondary" onclick="previewMaterial('poster-hindi-comparison')">
+                    👁️ Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="material-card" data-language="english" data-audience="officials">
+              <div class="material-preview">
+                <div class="preview-placeholder poster-preview">
+                  <div class="preview-content">
+                    <h4>DBT Banking Guide</h4>
+                    <div class="preview-elements">
+                      <div class="step-element">Step 1: Visit Bank</div>
+                      <div class="step-element">Step 2: Request DBT</div>
+                      <div class="step-element">Step 3: Verify</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="material-info">
+                <h4>Step-by-Step DBT Activation Guide</h4>
+                <p>Comprehensive guide for bank officials</p>
+                <div class="material-meta">
+                  <span class="meta-tag">📏 A2 Size</span>
+                  <span class="meta-tag">🏛️ Officials</span>
+                  <span class="meta-tag">📥 850 downloads</span>
+                </div>
+                <div class="material-actions">
+                  <button class="btn primary" onclick="downloadMaterial('poster-english-guide')">
+                    📥 Download PDF
+                  </button>
+                  <button class="btn secondary" onclick="previewMaterial('poster-english-guide')">
+                    👁️ Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="material-card" data-language="hindi" data-audience="parents">
+              <div class="material-preview">
+                <div class="preview-placeholder poster-preview">
+                  <div class="preview-content">
+                    <h4>ग्राम पंचायत सूचना</h4>
+                    <div class="preview-elements">
+                      <div class="notice-element">📢 महत्वपूर्ण सूचना</div>
+                      <div class="notice-element">🎓 छात्रवृत्ति हेतु</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="material-info">
+                <h4>Panchayat Notice Template (Hindi)</h4>
+                <p>Ready-to-print notice for village boards</p>
+                <div class="material-meta">
+                  <span class="meta-tag">📏 A4 Size</span>
+                  <span class="meta-tag">👥 Community</span>
+                  <span class="meta-tag">📥 2.1K downloads</span>
+                </div>
+                <div class="material-actions">
+                  <button class="btn primary" onclick="downloadMaterial('notice-hindi-panchayat')">
+                    📥 Download PDF
+                  </button>
+                  <button class="btn secondary" onclick="previewMaterial('notice-hindi-panchayat')">
+                    👁️ Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="category-section" data-category="social">
+          <h3 class="category-title">📱 Social Media Content</h3>
+          <div class="materials-grid">
+            
+            <div class="material-card" data-language="english" data-audience="students">
+              <div class="material-preview">
+                <div class="preview-placeholder social-preview">
+                  <div class="preview-content">
+                    <div class="social-header">📱 WhatsApp Ready</div>
+                    <div class="social-body">
+                      <p>🎓 Know the difference!</p>
+                      <p>Aadhaar Linked ≠ DBT Enabled</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="material-info">
+                <h4>WhatsApp Shareable Graphics</h4>
+                <p>Instagram story & WhatsApp status ready</p>
+                <div class="material-meta">
+                  <span class="meta-tag">📱 1080x1920</span>
+                  <span class="meta-tag">🎯 Social</span>
+                  <span class="meta-tag">📥 3.5K shares</span>
+                </div>
+                <div class="material-actions">
+                  <button class="btn primary" onclick="downloadMaterial('social-whatsapp-pack')">
+                    📥 Download Pack
+                  </button>
+                  <button class="btn secondary" onclick="shareMaterial('social-whatsapp-pack')">
+                    📤 Share Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="material-card" data-language="hindi" data-audience="parents">
+              <div class="material-preview">
+                <div class="preview-placeholder social-preview">
+                  <div class="preview-content">
+                    <div class="social-header">📺 Video Ready</div>
+                    <div class="social-body">
+                      <p>🎬 30 सेकंड वीडियो</p>
+                      <p>आधार-डीबीटी समझें</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="material-info">
+                <h4>Short Video Content (Hindi)</h4>
+                <p>30-second explainer videos for social sharing</p>
+                <div class="material-meta">
+                  <span class="meta-tag">🎬 MP4</span>
+                  <span class="meta-tag">⏱️ 30sec</span>
+                  <span class="meta-tag">📥 1.8K views</span>
+                </div>
+                <div class="material-actions">
+                  <button class="btn primary" onclick="downloadMaterial('video-hindi-explainer')">
+                    📥 Download MP4
+                  </button>
+                  <button class="btn secondary" onclick="previewMaterial('video-hindi-explainer')">
+                    ▶️ Watch
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+       
+        <div class="category-section" data-category="presentations">
+          <h3 class="category-title">💼 Presentation Materials</h3>
+          <div class="materials-grid">
+            
+            <div class="material-card" data-language="english" data-audience="teachers">
+              <div class="material-preview">
+                <div class="preview-placeholder presentation-preview">
+                  <div class="preview-content">
+                    <div class="slide-preview">
+                      <h5>Slide 1: Introduction</h5>
+                      <h5>Slide 2: Difference</h5>
+                      <h5>Slide 3: Process</h5>
+                      <h5>Slide 4: Benefits</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="material-info">
+                <h4>Teacher Training Presentation</h4>
+                <p>Complete PowerPoint for staff meetings</p>
+                <div class="material-meta">
+                  <span class="meta-tag">📊 25 slides</span>
+                  <span class="meta-tag">👩‍🏫 Teachers</span>
+                  <span class="meta-tag">📥 450 downloads</span>
+                </div>
+                <div class="material-actions">
+                  <button class="btn primary" onclick="downloadMaterial('presentation-teacher-training')">
+                    📥 Download PPT
+                  </button>
+                  <button class="btn secondary" onclick="previewMaterial('presentation-teacher-training')">
+                    👁️ Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="material-card" data-language="hindi" data-audience="parents">
+              <div class="material-preview">
+                <div class="preview-placeholder presentation-preview">
+                  <div class="preview-content">
+                    <div class="slide-preview">
+                      <h5>स्लाइड 1: परिचय</h5>
+                      <h5>स्लाइड 2: अंतर</h5>
+                      <h5>स्लाइड 3: प्रक्रिया</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="material-info">
+                <h4>Parent Meeting Presentation (Hindi)</h4>
+                <p>Ready-to-use slides for PTA meetings</p>
+                <div class="material-meta">
+                  <span class="meta-tag">📊 15 slides</span>
+                  <span class="meta-tag">👨‍👩‍👧 Parents</span>
+                  <span class="meta-tag">📥 720 downloads</span>
+                </div>
+                <div class="material-actions">
+                  <button class="btn primary" onclick="downloadMaterial('presentation-parent-meeting')">
+                    📥 Download PPT
+                  </button>
+                  <button class="btn secondary" onclick="previewMaterial('presentation-parent-meeting')">
+                    👁️ Preview
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+       
+        <div class="category-section" data-category="audio">
+          <h3 class="category-title">🔊 Audio Messages</h3>
+          <div class="materials-grid">
+            
+            <div class="material-card" data-language="hindi" data-audience="parents">
+              <div class="material-preview">
+                <div class="preview-placeholder audio-preview">
+                  <div class="preview-content">
+                    <div class="audio-visual">
+                      <div class="waveform">
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                        <div class="wave-bar"></div>
+                      </div>
+                      <p>🎙️ 2:30 मिनट</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="material-info">
+                <h4>Village Announcement (Hindi)</h4>
+                <p>Audio message for village loudspeakers</p>
+                <div class="material-meta">
+                  <span class="meta-tag">🔊 MP3</span>
+                  <span class="meta-tag">⏱️ 2:30</span>
+                  <span class="meta-tag">📥 890 plays</span>
+                </div>
+                <div class="material-actions">
+                  <button class="btn primary" onclick="downloadMaterial('audio-hindi-announcement')">
+                    📥 Download MP3
+                  </button>
+                  <button class="btn secondary" onclick="playAudio('audio-hindi-announcement')">
+                    ▶️ Listen
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section class="upload-section glass" style="display: none;" id="uploadSection">
+      <div class="container">
+        <h3>Upload New Material</h3>
+        <form class="upload-form" onsubmit="uploadMaterial(event)">
+          <div class="form-row">
+            <input type="text" placeholder="Material Title" required>
+            <select required>
+              <option value="">Select Category</option>
+              <option value="posters">Poster</option>
+              <option value="social">Social Media</option>
+              <option value="presentations">Presentation</option>
+              <option value="audio">Audio</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <select required>
+              <option value="">Select Language</option>
+              <option value="hindi">Hindi</option>
+              <option value="english">English</option>
+              <option value="bengali">Bengali</option>
+            </select>
+            <select required>
+              <option value="">Target Audience</option>
+              <option value="students">Students</option>
+              <option value="parents">Parents</option>
+              <option value="teachers">Teachers</option>
+              <option value="officials">Officials</option>
+            </select>
+          </div>
+          <div class="file-upload-area">
+            <input type="file" id="fileInput" accept=".pdf,.ppt,.pptx,.mp3,.mp4,.jpg,.png" required>
+            <label for="fileInput">
+              📁 Choose File or Drag & Drop
+            </label>
+          </div>
+          <button type="submit" class="btn primary">Upload Material</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+ 
+  <div class="fab-container">
+    <button class="fab" onclick="toggleUpload()">
+      ➕
+    </button>
+    <div class="fab-tooltip">Add New Material</div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script>
+   
+    const materialsData = {
+      downloads: {},
+      views: {},
+      shares: {}
+    };
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+      loadMaterialsStats();
+      setupFilterListeners();
+    });
+
+    function goHome() {
+      window.location.href = 'home.html';
+    }
+
+    function goToAdmin() {
+      window.location.href = 'admin.html';
+    }
+
+    
+    function filterMaterials() {
+      const language = document.getElementById('languageFilter').value;
+      const category = document.getElementById('categoryFilter').value;
+      const audience = document.getElementById('audienceFilter').value;
+
+      const cards = document.querySelectorAll('.material-card');
+      const categories = document.querySelectorAll('.category-section');
+
+      
+      categories.forEach(section => {
+        if (category === 'all' || section.dataset.category === category) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+
+   
+      cards.forEach(card => {
+        let show = true;
+        
+        if (language !== 'all' && card.dataset.language !== language) {
+          show = false;
+        }
+        
+        if (audience !== 'all' && card.dataset.audience !== audience) {
+          show = false;
+        }
+
+        card.style.display = show ? 'block' : 'none';
+      });
+
+      
+      cards.forEach((card, index) => {
+        if (card.style.display !== 'none') {
+          setTimeout(() => {
+            card.style.animation = 'fadeInUp 0.4s ease forwards';
+          }, index * 100);
+        }
+      });
+    }
+
+    // Download functionality
+    async function downloadMaterial(materialId) {
+      const button = event.target;
+      const originalText = button.innerHTML;
+      
+      button.innerHTML = '⏳ Downloading...';
+      button.disabled = true;
+
+      try {
+    
+        const response = await fetch(`${BASE_URL}/api/materials/download/${materialId}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${getAuthToken()}`
+          }
+        });
+
+        if (response.ok) {
+          
+          const blob = await response.blob();
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `${materialId}.pdf`;
+          document.body.appendChild(a);
+          a.click();
+          window.URL.revokeObjectURL(url);
+          document.body.removeChild(a);
+
+          
+          updateDownloadCount(materialId);
+          showNotification('✅ Download started successfully!', 'success');
+        } else {
+          throw new Error('Download failed');
+        }
+      } catch (error) {
+        
+        setTimeout(() => {
+          showNotification('📥 Demo: Download would start here', 'info');
+          updateDownloadCount(materialId);
+        }, 1500);
+      } finally {
+        button.innerHTML = originalText;
+        button.disabled = false;
+      }
+    }
+
+    function previewMaterial(materialId) {
+      showNotification('👁️ Preview functionality - would show material preview', 'info');
+    }
+
+    function shareMaterial(materialId) {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Sachetna - Awareness Material',
+          text: 'Check out this helpful material about Aadhaar-DBT banking!',
+          url: `${window.location.origin}/materials/${materialId}`
+        });
+      } else {
+        
+        navigator.clipboard.writeText(`${window.location.origin}/materials/${materialId}`);
+        showNotification('🔗 Link copied to clipboard!', 'success');
+      }
+    }
+
+    function playAudio(audioId) {
+      showNotification('🎵 Audio player would open here', 'info');
+    }
+
+  
+    function toggleUpload() {
+      const uploadSection = document.getElementById('uploadSection');
+      const isVisible = uploadSection.style.display !== 'none';
+      
+      uploadSection.style.display = isVisible ? 'none' : 'block';
+      
+      if (!isVisible) {
+        uploadSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    async function uploadMaterial(event) {
+      event.preventDefault();
+      
+      const formData = new FormData(event.target);
+      const submitBtn = event.target.querySelector('button[type="submit"]');
+      
+      submitBtn.innerHTML = '⏳ Uploading...';
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch(`${BASE_URL}/api/materials/upload`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${getAuthToken()}`
+          },
+          body: formData
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          showNotification('✅ Material uploaded successfully!', 'success');
+          event.target.reset();
+          toggleUpload();
+          
+          location.reload();
+        } else {
+          throw new Error('Upload failed');
+        }
+      } catch (error) {
+        showNotification('❌ Upload failed. Please try again.', 'error');
+      } finally {
+        submitBtn.innerHTML = 'Upload Material';
+        submitBtn.disabled = false;
+      }
+    }
+
+   
+    function updateDownloadCount(materialId) {
+      materialsData.downloads[materialId] = (materialsData.downloads[materialId] || 0) + 1;
+      
+      const metaTags = document.querySelectorAll('.meta-tag');
+      metaTags.forEach(tag => {
+        if (tag.textContent.includes('downloads')) {
+          const currentCount = parseInt(tag.textContent.match(/\d+/)[0]);
+          tag.textContent = tag.textContent.replace(/\d+/, currentCount + 1);
+        }
+      });
+    }
+
+    function loadMaterialsStats() {
+      
+      console.log('Loading materials statistics...');
+    }
+
+    function setupFilterListeners() {
+     
+      document.querySelectorAll('select[id$="Filter"]').forEach(select => {
+        select.addEventListener('change', filterMaterials);
+      });
+    }
+
+    function showNotification(message, type) {
+      const notification = document.createElement('div');
+      notification.className = `notification ${type}`;
+      notification.textContent = message;
+      notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        color: white;
+        font-weight: 600;
+        z-index: 10000;
+        animation: slideInRight 0.3s ease;
+        ${type === 'success' ? 'background: linear-gradient(45deg, #10B981, #065F46);' : ''}
+        ${type === 'error' ? 'background: linear-gradient(45deg, #EF4444, #B91C1C);' : ''}
+        ${type === 'info' ? 'background: linear-gradient(45deg, #3B82F6, #1E40AF);' : ''}
+      `;
+
+      document.body.appendChild(notification);
+
+      setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease forwards';
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 300);
+      }, 3000);
+    }
+
+    function getAuthToken() {
+      return localStorage.getItem('authToken') || 'demo-token';
+    }
+
+    
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes slideInRight {
+        from {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+      @keyframes slideOutRight {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

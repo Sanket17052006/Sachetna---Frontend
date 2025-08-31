@@ -3,10 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Panel</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Admin Panel - Sachetna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    
+    :root {
+      --dark-bg: #111827;
+      --card-bg: #1f2937;
+      --border-color: #374151;
+      --primary-color: #3b82f6; 
+      --primary-hover: #2563eb;
+      --admin-color: #8b5cf6; 
+      --admin-hover: #7c3aed;
+      --text-light: #f9fafb;
+      --text-muted: #9ca3af;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    
+    .btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 0.75rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    
+    .btn:disabled {
+        background-color: #4b5563;
+        color: #9ca3af;
+        cursor: not-allowed;
+    }
+
+
+    #admin-page .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+    }
+
+    #admin-page h2 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 3rem;
+      background: -webkit-linear-gradient(45deg, var(--admin-color), var(--text-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    #admin-page .section {
+      background-color: var(--card-bg);
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+
+    #admin-page h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 0;
+      padding-bottom: 0.75rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--admin-color);
+      color: var(--text-light);
+    }
+
+    #admin-page p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    #admin-page .btn.primary {
+      background-color: var(--admin-color);
+      color: white;
+    }
+
+    #admin-page .btn.primary:hover:not(:disabled) {
+      background-color: var(--admin-hover);
+      transform: translateY(-2px);
+    }
+
+  </style>
 </head>
-<body>
+<body id="admin-page">
   <div class="container">
     <h2>Admin Dashboard (Prototype)</h2>
 
@@ -23,3 +127,4 @@
   </div>
 </body>
 </html>
+
